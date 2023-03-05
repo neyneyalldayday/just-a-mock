@@ -2,6 +2,23 @@
     margin: 0;
     padding:0;
 }
+h1{
+    font-family: "Big Shoulders Display", cursive;
+}
+h2{
+    font-family: "Big Shoulders Display", cursive;
+}
+h3{
+    font-family: "Big Shoulders Display", cursive;
+}
+h4{
+    font-family: "Big Shoulders Display", cursive;
+}
+
+p{
+    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Outfit', sans-serif;
+}
 
 .arrow-button {
     display: inline-block;
@@ -44,7 +61,12 @@
 header{
     display: flex;   
     height: 40vh;
+    margin-bottom: 1rem;
+    border: solid green 1px;
+}
 
+header > *{
+    flex: 1;
 }
 .hero{
     background-image: url(./tablet/image-hero.jpg);    
@@ -67,58 +89,102 @@ header{
 main{
     display: flex;
     flex-direction: column;
-    height:30vh;
+    height:50vh;
     position: relative;
     margin-top: 12rem;
+   
+}
+
+main > *{
+    flex: 1;
 }
 .gallery-top{
     display: flex;
+    border: solid red 2px;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
 }
 .gallery-content{
     display: flex;
     flex-direction: column;
     margin: 1rem;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    gap: 2rem;
+    
+}
+.gallery-content h2{
+    font-size: 2em;
 }
 .gallery{
     background-image: url(./tablet/image-grid-1.jpg);
     background-size:  cover;
     background-repeat: no-repeat;
-    height: 15rem;
+    height: 100%;
     width: 30rem;
     margin: 1rem;
 }
 
 .gallery-text{
     max-width: 14rem;
+    background-color: black;    
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    gap: 2rem;
+    padding: 2rem
+}
+
+.gallery-text h3{
+    color: #fff;
+    font-size: 2em;
+}
+
+.gallery-text p{
+    color: #fff;
 }
 
 .gallery-bottom{
     display: flex;
-    margin: 1rem;
+    margin: 1rem;   
+}
+.gallery-bottom > *{
+    flex: 1;
 }
 .left-image{
     background-image: url(./tablet/image-grid-2.jpg);
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    height: 40rem;
-    width: 40rem;
+    height: 50rem;
+    width: 50rem;
+   
 }
 
 .right-side{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    top: 0;
+    left: 0;   
     margin: 1rem;
-    padding: 1rem;
+    align-items: center;
+    border: solid green 1px;
 }
 .little-image{
     background-image: url(./tablet/image-grid-3.jpg);
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    height: 20rem;
-    width: 20rem;
-
+    height: 100%;
+    width: 100%;
+    border: solid green 1px;
+    display: flex;
+    
 }
 
 .icons{
@@ -136,6 +202,13 @@ footer{
    margin-top: 50rem;
    align-items: center;
    justify-content: space-evenly ;
+}
+footer > * {
+    flex: 1;
+}
+
+footer h4{
+    font-size: 2em;
 }
 
 .footer-text{
