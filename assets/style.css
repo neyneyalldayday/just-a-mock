@@ -1,3 +1,8 @@
+::before,
+::after{
+    box-sizing: border-box;
+}
+
 *{
     margin: 0;
     padding:0;
@@ -41,7 +46,7 @@ p{
     left: 0;
     width: 66.67%;
     height: 100%;
-    background-color: #0d0d0d;
+    background-color: #151515;
     
   }
   
@@ -60,50 +65,37 @@ p{
 
 header{
     display: flex;   
-    height: 40vh;
-    margin-bottom: 1rem;
-    border: solid green 1px;
+    margin-bottom: 1rem;     
 }
 
 header > *{
     flex: 1;
 }
-.hero{
-    background-image: url(./tablet/image-hero.jpg);    
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 30rem;
-    width: 20rem;
-    position: absolute;
+.hero{   
+    width: 20rem;   
 }
 .header-content{
     display: flex;
     flex-direction: column;
     max-width: 15rem;
-    justify-content: flex-end;
-    align-items: center;
-    position: relative;
-    margin-left: 18rem;
+    justify-content: center;
+    align-items: left;   
 }
 
 main{
     display: flex;
-    flex-direction: column;
-    height:50vh;
-    position: relative;
-    margin-top: 12rem;
-   
+    flex-direction: column;    
+    margin-bottom: 2rem;   
 }
 
 main > *{
     flex: 1;
 }
 .gallery-top{
-    display: flex;
-    border: solid red 2px;
+    display: flex;  
     align-items: center;
     justify-content: center;
-    height: fit-content;
+   
 }
 .gallery-content{
     display: flex;
@@ -112,25 +104,19 @@ main > *{
     align-items: center;
     justify-content: center;
     text-align: left;
-    gap: 2rem;
-    
+    gap: 2rem;  
+    width: 25rem;    
 }
 .gallery-content h2{
-    font-size: 2em;
+    font-size: 3em;
 }
-.gallery{
-    background-image: url(./tablet/image-grid-1.jpg);
-    background-size:  cover;
-    background-repeat: no-repeat;
-    height: 100%;
-    width: 30rem;
+.gallery{    
     margin: 1rem;
 }
 
 .gallery-text{
     max-width: 14rem;
-    background-color: black;    
-    height: 100%;
+    background-color: black;   
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -152,39 +138,34 @@ main > *{
 
 .gallery-bottom{
     display: flex;
-    margin: 1rem;   
+   margin: 2rem;   
 }
 .gallery-bottom > *{
     flex: 1;
 }
-.left-image{
-    background-image: url(./tablet/image-grid-2.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 50rem;
-    width: 50rem;
-   
+.left-image{  
+  border: solid green 1px; 
+  width: 50rem;
+}
+.bench{
+    max-width: 100%;
+    height: auto;
 }
 
 .right-side{
     display: flex;
     flex-direction: column;
-    position: relative;
-    top: 0;
-    left: 0;   
+    position: relative;       
     margin: 1rem;
-    align-items: center;
-    border: solid green 1px;
+    align-items: center;   
+    width: 20rem;   
 }
-.little-image{
-    background-image: url(./tablet/image-grid-3.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 100%;
-    width: 100%;
-    border: solid green 1px;
-    display: flex;
+.little-image{   
     
+    
+}
+.gallery-image{
+    max-width: 100%;
 }
 
 .icons{
@@ -195,11 +176,8 @@ main > *{
 footer{
     display: flex;
     bottom: 0;
-    background-color: black;
-    color: white;
-    height: 30vh;
-   position: relative;
-   margin-top: 50rem;
+    background-color: #151515;
+    color: white; 
    align-items: center;
    justify-content: space-evenly ;
 }
@@ -215,5 +193,75 @@ footer h4{
     max-width: 15rem;
 }
 
+
+/* location section */
+
+.location-content{
+    display: flex;
+    flex-direction: row; 
+    padding: 2rem; 
+    background-color: #151515  
+}
+
+
+
+
+.location-footer{
+    display: flex;
+    bottom: 0;
+    background-color: #D5966C;
+    color: white; 
+    align-items: center;
+    justify-content: space-evenly ; 
+   padding: 1rem;
+}
+
+.location-footer h3{
+    font-size: 1.5em;
+    color: black;
+}
+
+.location-footer-text{
+    max-width: 30rem;
+    padding: 1.5rem;
+    color: black;
+}
+
+.footer-icons{
+    height: 1rem;
+    width: 1rem;   
+}
+
+.icon-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.location-heading{
+    color: #fff;
+    font-size: 1.5em;
+    padding: 0;
+    margin: 0;
+}
+
+.address-content h2{
+    color: #D5966C;
+    padding-bottom: 1rem;
+}
+.address-content p{
+    color: #bcbaba;
+}
+.address{
+    padding-bottom: 1rem;
+}
+
+.about{
+    padding-bottom: 1rem;
+}
+
+#map{
+    height: 180px;
+}
 
 
