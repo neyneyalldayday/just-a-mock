@@ -37,7 +37,8 @@ p{
     text-align: center;
     font-size: 16px;
     font-weight: bold;
-    color: #ffffff;   
+    color: #ffffff;  
+    z-index: 999; 
   }
   
   .color-bar {
@@ -85,7 +86,7 @@ header > *{
 main{
     display: flex;
     flex-direction: column;    
-    margin-bottom: 2rem;   
+      
 }
 
 main > *{
@@ -112,10 +113,11 @@ main > *{
 }
 .gallery{    
     margin: 1rem;
+    max-width: fit-content;
 }
 
 .gallery-text{
-    max-width: 14rem;
+    max-width: 10rem;
     background-color: black;   
     width: 100%;
     display: flex;
@@ -145,11 +147,11 @@ main > *{
 }
 .left-image{  
   border: solid green 1px; 
-  width: 50rem;
+  max-width: fit-content;
 }
 .bench{
     max-width: 100%;
-    height: auto;
+    
 }
 
 .right-side{
@@ -158,10 +160,11 @@ main > *{
     position: relative;       
     margin: 1rem;
     align-items: center;   
-    width: 20rem;   
+    width: fit-content;
+    border: solid red 1px;   
 }
 .little-image{   
-    
+   max-width: 14rem; 
     
 }
 .gallery-image{
@@ -178,8 +181,9 @@ footer{
     bottom: 0;
     background-color: #151515;
     color: white; 
-   align-items: center;
-   justify-content: space-evenly ;
+    align-items: center;
+    justify-content: space-evenly ;
+    padding: 1rem;
 }
 footer > * {
     flex: 1;
@@ -195,12 +199,12 @@ footer h4{
 
 
 /* location section */
-
 .location-content{
     display: flex;
     flex-direction: row; 
     padding: 2rem; 
-    background-color: #151515  
+    background-color: #151515 ; 
+    
 }
 
 
@@ -261,7 +265,57 @@ footer h4{
 }
 
 #map{
-    height: 180px;
+    height: 20rem;
+    z-index: 1;
 }
 
 
+
+
+
+/* media queries */
+
+@media screen and (max-width: 420px){
+    header{
+        display: flex;  
+        flex-direction: column; 
+        margin-bottom: 1rem;     
+    }
+
+    .hero{
+        display: none;
+    }
+
+    .hero::before{       
+        content: "";
+        display: block;
+        padding-bottom: 133.33%;
+        background-image: url(../assets/mobile/image-hero.jpg);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;       
+    }
+
+    .gallery-top{
+        display: flex;  
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+       
+    }
+    .gallery-bottom{
+        display: flex;
+        flex-direction: column;
+       margin: 2rem;   
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        
+    }
+}
+
+@media screen and (min-width: 1080px){
+
+}
