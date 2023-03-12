@@ -51,8 +51,17 @@ Users should be able to:
 - Live Site URL: [live site URL here](https://neyneyalldayday.github.io/just-a-mock/)
 
 ## My process
-So i have severe adhd so looking at this at the begenning took some time to dig through all the 
-information given to me. it was a lot for sure. But once i got all my ducks in a row i laid out the figma page and got a good handle for how the middle ground would look. Usually i do most my personal work with next.js and other react style frameworks but that seemed over kill for what we were doing here, so i went with a simple html css and javscript sandbox. and as stated before i looked to the tablet view to start my layout. i Quickly was reminded about certian variables you dont really run into in a component based frame work. mainly position and height. its typically best to avoid setting a height variable on any element that is responsive and i forgot that ha. because the content always needs somewhere to go. so i was running into overflow issues and things of that nature. after i fixed that i generally just gave all the parent emlememts flex values and worked downward toward the children. then i moved to mobile view since its typically the least painful. and then to desktop view. I trided to solve that chage to the header based off the background. i tried to use a dynamic javascript solution but couldnt get it to work so in the end i just went with a gradient wich doesnt fit the look at all but better than nothing in my mind. Lastly i worked on the map. getting a grey background took some digging since most endpoints were no longer supported. but in the end got it finished. This is by no means perfect but im pretty happy with the result. And just to mention i didnt use any css frameworks on this just flexbox and vanilla css.  
+I have severe ADHD, so it took me some time to dig through all the information given to me at the beginning. There was a lot to sort through, but once I got all my ducks in a row, I laid out the Figma page and got a good handle for how the middle ground would look.
+
+Usually, I do most of my personal work with Next.js and other React-style frameworks, but that seemed like overkill for what we were doing here. So, I went with a simple HTML, CSS, and JavaScript sandbox. As stated before, I looked to the tablet view to start my layout.
+
+I quickly realized that certain variables you don't typically run into in a component-based framework, mainly position and height, were necessary. It's typically best to avoid setting a height variable on any element that is responsive, and I forgot that. The content always needs somewhere to go, so I was running into overflow issues and things of that nature. After fixing that, I generally just gave all the parent elements flex values and worked downward towards the children.
+
+Then, I moved to the mobile view since it's typically the least painful, and then to the desktop view. I tried to solve the change to the header based on the background by using a dynamic JavaScript solution, but I couldn't get it to work. In the end, I went with a gradient, which doesn't fit the look at all but is better than nothing in my mind.
+
+Lastly, I worked on the map. Getting a grey background took some digging since most endpoints were no longer supported, but I was able to finish it in the end.
+
+This is by no means perfect, but I'm pretty happy with the result. And just to mention, I didn't use any CSS frameworks on this, just flexbox and vanilla CSS. 
 ### Built with
 
 
