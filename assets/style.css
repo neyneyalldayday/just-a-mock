@@ -24,6 +24,10 @@ p{
     font-family: 'Big Shoulders Display', cursive;
     font-family: 'Outfit', sans-serif;
 }
+a{
+    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Outfit', sans-serif;
+}
 
 .arrow-button {
     display: inline-block;
@@ -48,7 +52,13 @@ p{
     width: 66.67%;
     height: 100%;
     background-color: #151515;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .color-bar:hover{
+    background-color: #D5966C;
   }
   
   .arrow-icon {
@@ -61,8 +71,26 @@ p{
     background-repeat: no-repeat;
     background-position: center;
     background-size: 20px 20px;
-    background-color: rgb(203, 136, 53);
+    background-color: #D5966C;
   }
+
+  .location-arrow-icon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 33.33%;
+    height: 100%;
+    background-image: url(./icon-arrow-left.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px 20px;
+    background-color: #D5966C;
+  }
+
+  .arrow-icon:hover {
+    background-color: #151515;
+  }
+  
 
 header{
     display: flex;   
@@ -81,6 +109,17 @@ header > *{
     max-width: 15rem;
     justify-content: center;
     align-items: left;   
+}
+
+.hero-text{
+    display: none;
+}
+
+.mobile{
+    display: none;
+}
+.desktop{
+    display: none;
 }
 
 main{
@@ -145,8 +184,7 @@ main > *{
 .gallery-bottom > *{
     flex: 1;
 }
-.left-image{  
-  border: solid green 1px; 
+.left-image{ 
   max-width: fit-content;
 }
 .bench{
@@ -160,8 +198,7 @@ main > *{
     position: relative;       
     margin: 1rem;
     align-items: center;   
-    width: fit-content;
-    border: solid red 1px;   
+    width: fit-content;     
 }
 .little-image{   
    max-width: 14rem; 
@@ -174,6 +211,10 @@ main > *{
 .icons{
     height: 1rem;
     width: 1rem;   
+}
+
+.icons:hover{
+    background-color: #D5966C;
 }
 
 footer{
@@ -206,9 +247,6 @@ footer h4{
     background-color: #151515 ; 
     
 }
-
-
-
 
 .location-footer{
     display: flex;
@@ -279,21 +317,21 @@ footer h4{
     header{
         display: flex;  
         flex-direction: column; 
-        margin-bottom: 1rem;     
+        margin-bottom: 1rem;
+         
     }
-
-    .hero{
+    .tablet{
         display: none;
     }
 
-    .hero::before{       
-        content: "";
+    .mobile{
         display: block;
-        padding-bottom: 133.33%;
-        background-image: url(../assets/mobile/image-hero.jpg);
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;       
+        width: 100%;
+    }
+
+
+    .hero{
+        align-items: center;
     }
 
     .gallery-top{
@@ -305,8 +343,56 @@ footer h4{
     }
     .gallery-bottom{
         display: flex;
+        flex-direction: column;       
+    }
+
+    .gallery-content{
+        display: flex;
         flex-direction: column;
-       margin: 2rem;   
+        
+    }
+
+    .gallery-content h2{
+      text-align: center;
+        
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        
+    }
+}
+
+
+@media screen and (max-width:768px){
+    header{
+        display: flex;  
+        flex-direction: column; 
+        margin-bottom: 1rem;
+      
+        align-items: center;    
+    }
+
+    .hero{   
+        width: auto;           
+    }
+
+   
+
+
+    .gallery-top{
+        display: flex;  
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+       
+    }
+    .gallery-bottom{
+        display: flex;
+        flex-direction: column;     
+        align-items: center;
+        justify-content: center;  
     }
 
     footer{
@@ -317,5 +403,174 @@ footer h4{
 }
 
 @media screen and (min-width: 1080px){
+    header{
+        display: flex;   
+        margin-bottom: 1rem; 
+        
+    }
 
+    .tablet{
+        display: none;
+    }
+
+    .desktop{
+        display: block;
+    }
+
+    
+    header > *{
+        flex: 1;
+    }
+    .hero{  
+        position: relative;
+        display: flex;    
+        background-color: black; 
+        justify-content: flex-end; 
+        align-items: center;
+        
+    }
+
+    .hero h1{
+        position: relative;
+        left:6rem;
+        font-size: 3em;
+    }
+    .hero-text{
+        display: flex;
+        flex-direction: column;
+        color: white;
+     
+    }
+
+    .hero-text h1 {
+        background: -webkit-linear-gradient(white, black);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .header-content{
+        display: flex;
+        flex-direction: column;
+        max-width: 30rem;
+        justify-content: center;
+        align-items: left;
+        position: relative;
+        right: 4rem; 
+        
+    }
+
+    .header-content h2 {
+        display: none;
+    }
+
+    .header-content p{
+      margin-bottom: 5rem;
+      text-align: center;
+    }
+  
+    .gallery-content h2{
+        font-size: 3em;
+    }
+    .gallery{    
+        max-width: fit-content;
+    }
+    
+    .gallery-text{
+       margin: 2rem; 
+        padding: 5rem;        
+    }
+    
+    .gallery-text h3{        
+        font-size: 4em;
+    }
+    
+   
+    .gallery-bottom > *{
+        flex: 1;
+    }
+    .left-image{   
+      max-width: fit-content;
+    }   
+ 
+    .little-image{   
+       max-width: 100%; 
+        
+    }
+    .gallery-image{
+        max-width: 100%;
+    }
+    .little-image{
+        margin: 2rem;
+    }  
+    
+    
+
+    .location-content{
+        display: flex;
+        flex-direction: row; 
+        padding: 2rem; 
+        background-color: #151515 ;
+        height: 30rem;
+        
+    }
+    
+    .location-footer{
+        display: flex;
+        bottom: 0;
+        background-color: #D5966C;
+        color: white; 
+        align-items: center;
+        justify-content: space-evenly ; 
+        padding: 1rem;
+       
+    }
+    
+    .location-footer h3{
+        font-size: 1.5em;
+        color: black;
+    }
+    
+    .location-footer-text{
+        max-width: 30rem;
+        padding: 1.5rem;
+        color: black;
+    }
+    
+    .footer-icons{
+        height: 1rem;
+        width: 1rem;   
+    }
+    
+    .icon-wrapper{
+        display: flex;
+        justify-content: flex-end;
+        gap: 1rem;
+    }
+    
+    .location-heading{
+        color: #fff;
+        font-size: 1.5em;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .address-content h2{
+        color: #D5966C;
+        padding-bottom: 1rem;
+    }
+    .address-content p{
+        color: #bcbaba;
+    }
+    .address{
+        padding-bottom: 1rem;
+    }
+    
+    .about{
+        padding-bottom: 1rem;
+    }
+    
+    #map{
+        height: 30rem;
+        z-index: 1;
+    }
+  
 }
